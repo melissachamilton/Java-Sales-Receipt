@@ -1,0 +1,3 @@
+Books [book]
+Food [chocolate bar, imported box of chocolates]
+Medical Products [packet of headache pills]
