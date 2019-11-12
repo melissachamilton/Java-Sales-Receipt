@@ -20,9 +20,9 @@ public class Receipt {
     double RoundupTotal;
 
   
-    Scanner scanner = new Scanner( file);
-    File file = new File (args [0]);
-    PrintWriter writer = new PrintWriter(args [1]);
+    // File file = new File (args [0]);
+    Scanner scanner = new Scanner(System.in);
+    // PrintWriter writer = new PrintWriter(args [1]);
     
 
     System.out.println("Item Purchased");
