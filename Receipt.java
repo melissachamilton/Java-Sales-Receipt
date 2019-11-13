@@ -37,9 +37,14 @@ public static void main(String[] args) {
     System.out.println("Cost");
     double cost = scanner.nextDouble();
 
+    for (ListIterator<E> iter = list.listIterator("Item Purchased"); iter.hasNext("Quantity Purchased"); ) {
+      E element = iter.next();
+  }
+
     // PrintWriter writer = new PrintWriter(args [1]);
   
     // decimalNumber = scanner.nextDouble();
+    System.out.println(quantity + " " + item + ":" + cost);
 
     NetCost = cost * quantity;
     SalesTax = SalesTaxPercentage * NetCost;
@@ -48,7 +53,7 @@ public static void main(String[] args) {
     RoundupTotal = Math.round(Total * 100.0) / 100.0;
 
 
-    System.out.println("Subtotal:" + NetCost + "\nSales Tax:" + SalesTax + "\nImport Duty:" + ImportDuty + "\nTotal $:" + RoundupTotal);
+    System.out.println("\nSubtotal:" + NetCost + "\nSales Tax:" + SalesTax + "\nImport Duty:" + ImportDuty + "\nTotal $:" + RoundupTotal);
 
 
     
