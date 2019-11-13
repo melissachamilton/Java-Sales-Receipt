@@ -1,20 +1,25 @@
 import java.util.Scanner;
-import java.io.FileNotFoundException;
-import java.io.File;
-import java.io.PrintWriter;
+import java.util.*;
+
+// import java.io.FileNotFoundException;
+// import java.io.File;
+// import java.io.PrintWriter;
 
 /**
  * Receipt
  */
 public class Receipt {
 
-  public static void main(String[] args) throws FileNotFoundException {
+public static void main(String[] args) {
+  
+  // throws FileNotFoundException 
 
 
     double SalesTaxPercentage = 0.10;
     double ImportDutyPercentage = 0.05;
-    double Item;
+    double decimalNumber;
     double SalesTax;
+    double NetCost;
     double ImportDuty;
     double Total;
     double RoundupTotal;
@@ -22,20 +27,28 @@ public class Receipt {
   
     // File file = new File (args [0]);
     Scanner scanner = new Scanner(System.in);
-    // PrintWriter writer = new PrintWriter(args [1]);
-    
 
     System.out.println("Item Purchased");
-    Item = scanner.nextDouble();
+    String item = scanner.nextLine();
 
-    SalesTax = SalesTaxPercentage * Item;
-    ImportDuty = ImportDutyPercentage * Item;
-    Total = Item + SalesTax + ImportDuty;
+    System.out.println("Quantity Purchased");
+    int quantity = scanner.nextInt();
+
+    System.out.println("Cost");
+    double cost = scanner.nextDouble();
+
+    // PrintWriter writer = new PrintWriter(args [1]);
+  
+    // decimalNumber = scanner.nextDouble();
+
+    NetCost = cost * quantity;
+    SalesTax = SalesTaxPercentage * NetCost;
+    ImportDuty = ImportDutyPercentage * NetCost;
+    Total = NetCost + SalesTax + ImportDuty;
     RoundupTotal = Math.round(Total * 100.0) / 100.0;
 
 
-
-    System.out.println("Sales Tax $" +  SalesTax + "\nImport Duty $" + ImportDuty + "\nTotal $" + RoundupTotal);
+    System.out.println("Subtotal:" + NetCost + "\nSales Tax:" + SalesTax + "\nImport Duty:" + ImportDuty + "\nTotal $:" + RoundupTotal);
 
 
     
