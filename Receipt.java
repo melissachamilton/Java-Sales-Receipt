@@ -18,6 +18,14 @@ public static void main(String[] args) {
     double SalesTaxPercentage = 0.10;
     double ImportDutyPercentage = 0.05;
     double decimalNumber;
+    // Array Food[] = {chocolate bar, imported box of chocolates, pasta, box };
+    // Array Medical [] = {'headache pills'}
+    // Array Books [] = {book, Bible, Yearbook}
+    // Array Everything [] = {music CD, imported bottle of perfume, bottle of perfume }
+    // String item = "imported box of chocolates";
+    
+    
+    
     double SalesTax;
     double NetCost;
     double ImportDuty;
@@ -26,6 +34,8 @@ public static void main(String[] args) {
 
   
     // File file = new File (args [0]);
+
+    // for (Scanner i = 0; i = 100; i = i) {
     Scanner scanner = new Scanner(System.in);
 
     System.out.println("Item Purchased");
@@ -36,10 +46,11 @@ public static void main(String[] args) {
 
     System.out.println("Cost");
     double cost = scanner.nextDouble();
-
-    for (ListIterator<E> iter = list.listIterator("Item Purchased"); iter.hasNext("Quantity Purchased"); ) {
-      E element = iter.next();
-  }
+    
+    
+  //   for (ListIterator<E> iter = list.listIterator("Item Purchased"); iter.hasNext("Quantity Purchased"); ) {
+  //     E element = iter.next();
+  // }
 
     // PrintWriter writer = new PrintWriter(args [1]);
   
@@ -52,12 +63,12 @@ public static void main(String[] args) {
     Total = NetCost + SalesTax + ImportDuty;
     RoundupTotal = Math.round(Total * 100.0) / 100.0;
 
-
+    
     System.out.println("\nSubtotal:" + NetCost + "\nSales Tax:" + SalesTax + "\nImport Duty:" + ImportDuty + "\nTotal $:" + RoundupTotal);
 
 
     
-
-
+  // }
+  
   }
 }
