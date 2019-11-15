@@ -1,37 +1,43 @@
 import java.util.Scanner;
 import java.util.*;
-
-// import java.io.FileNotFoundException;
-// import java.io.File;
-// import java.io.PrintWriter;
+import java.io.FileNotFoundException;
+import java.io.File;
+import java.io.PrintWriter;
 
 /**
  * Receipt
  */
 public class Receipt {
 
-public static void main(String[] args) {
+public static void main(String[] args) { 
+// throws FileNotFoundException {
+//   int Purchases = 1; 
+//   File input = new File("inventory.txt");
+//   PrintWriter output = new PrintWriter("output.txt");
+//   Scanner sc = new Scanner(input);
+
+//   while(sc.hasNextLine()) {
+//     output.println(Purchases++ + ")" + sc.nextLine()); 
+//   }
+
+//   sc.close();
+//   ouput.close ();
+// }
+
   
-  // throws FileNotFoundException 
 
 
     double SalesTaxPercentage = 0.10;
     double ImportDutyPercentage = 0.05;
     double decimalNumber;
-    // Array Food[] = {chocolate bar, imported box of chocolates, pasta, box };
-    // Array Medical [] = {'headache pills'}
-    // Array Books [] = {book, Bible, Yearbook}
-    // Array Everything [] = {music CD, imported bottle of perfume, bottle of perfume }
-    // String item = "imported box of chocolates";
-    
-    
-    
+    String [] NoTax = {"import chocolate", "chocolate bar", "pills", "book"};
     double SalesTax;
     double NetCost;
     double ImportDuty;
+    double TotalBoth;
+    double TotalID;
     double Total;
     double RoundupTotal;
-
   
     // File file = new File (args [0]);
 
@@ -39,7 +45,12 @@ public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
 
     System.out.println("Item Purchased");
-    String item = scanner.nextLine();
+      String [] item = {scanner.nextLine()};
+    
+      // String [] InputItem = {item};
+
+      // System.out.println(InputItem);
+    
 
     System.out.println("Quantity Purchased");
     int quantity = scanner.nextInt();
@@ -55,20 +66,35 @@ public static void main(String[] args) {
     // PrintWriter writer = new PrintWriter(args [1]);
   
     // decimalNumber = scanner.nextDouble();
-    System.out.println(quantity + " " + item + ":" + cost);
-
+    
+    System.out.println(quantity + " " + item[0] + ":" + cost);
+    
     NetCost = cost * quantity;
     SalesTax = SalesTaxPercentage * NetCost;
     ImportDuty = ImportDutyPercentage * NetCost;
     Total = NetCost + SalesTax + ImportDuty;
+    TotalID = NetCost + ImportDuty;
     RoundupTotal = Math.round(Total * 100.0) / 100.0;
 
-    
-    System.out.println("\nSubtotal:" + NetCost + "\nSales Tax:" + SalesTax + "\nImport Duty:" + ImportDuty + "\nTotal $:" + RoundupTotal);
+ 
+ for (int i = 0; i <= NoTax.length - 1; i++)
+ { if (item[0] == NoTax[i])
+     
+      {System.out.println("\nSubtotal:" + NetCost + "\nImport Duty:" + ImportDuty);
 
+    } 
+    else {
+      System.out.println("It WORKS!!!");}
 
     
-  // }
-  
+    //  (for (int i = 0; i < NoTax.length - 1; i++)
+    // item[0] != NoTax[i]; {
+    // System.out.println("\nSubtotal:" + NetCost + "\nSales Tax" + SalesTax + "\nImport Duty:" + ImportDuty + "\nTotal $:" + RoundupTotal);
+    
+    // }
+    
+    
+    }
   }
+
 }

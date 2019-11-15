@@ -1,9 +1,1 @@
-Food Chocolate Bar 
-Food Imported Box of chocolates
-Books Book
-Medical Products Packet of Headache pills
-
-
-Books [book]
-Food [chocolate bar, imported box of chocolates]
-Medical Products [packet of headache pills]
+1 chocolate bar
