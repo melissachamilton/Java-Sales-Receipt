@@ -25,8 +25,6 @@ public static void main(String[] args) {
 // }
 
   
-
-
     double SalesTaxPercentage = 0.10;
     double ImportDutyPercentage = 0.05;
     double decimalNumber;
@@ -38,20 +36,13 @@ public static void main(String[] args) {
     double TotalID;
     double Total;
     double RoundupTotal;
-  
-    // File file = new File (args [0]);
 
-    // for (Scanner i = 0; i = 100; i = i) {
     Scanner scanner = new Scanner(System.in);
 
+    
     System.out.println("Item Purchased");
       String [] item = {scanner.nextLine()};
-    
-      // String [] InputItem = {item};
-
-      // System.out.println(InputItem);
-    
-
+      
     System.out.println("Quantity Purchased");
     int quantity = scanner.nextInt();
 
@@ -63,9 +54,6 @@ public static void main(String[] args) {
   //     E element = iter.next();
   // }
 
-    // PrintWriter writer = new PrintWriter(args [1]);
-  
-    // decimalNumber = scanner.nextDouble();
     
     System.out.println(quantity + " " + item[0] + ":" + cost);
     
@@ -76,15 +64,30 @@ public static void main(String[] args) {
     TotalID = NetCost + ImportDuty;
     RoundupTotal = Math.round(Total * 100.0) / 100.0;
 
- 
- for (int i = 0; i <= NoTax.length - 1; i++)
- { if (item[0] == NoTax[i])
+
+System.out.println(item[0]);
+String A = new String(item[0]); 
+
+{ 
+for (int i=0; i < NoTax.length; i++);
+String B = new String(NoTax[i]);
+if(A.equals (B));
+
+
+  
+  // System.out.println(NoTax);
+  
+  // item[0] = NoTax[i];
      
       {System.out.println("\nSubtotal:" + NetCost + "\nImport Duty:" + ImportDuty);
 
     } 
-    else {
-      System.out.println("It WORKS!!!");}
+ 
+  // else {
+
+  
+  //   System.out.println("IT WORKS!!!!");
+  // }
 
     
     //  (for (int i = 0; i < NoTax.length - 1; i++)
@@ -92,9 +95,10 @@ public static void main(String[] args) {
     // System.out.println("\nSubtotal:" + NetCost + "\nSales Tax" + SalesTax + "\nImport Duty:" + ImportDuty + "\nTotal $:" + RoundupTotal);
     
     // }
-    
-    
+ }
+ 
     }
   }
 
-}
+  
+
