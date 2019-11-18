@@ -2,6 +2,12 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - SalesReceipt",
+      "request": "launch",
+      "mainClass": "SalesReceipt"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - Receipt",
       "request": "launch",
       "mainClass": "Receipt"

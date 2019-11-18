@@ -1,1 +1,4 @@
-1 chocolate bar
+1,book,12.49
+2,chocolate bar,2.00
+3,headache pills,5.00
+4,import chocolate bar,3.5
